@@ -63,6 +63,39 @@
 .text__light{
     font-style: oblique;
 }
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+      display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+      display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+  
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+  
+  .carousel-inner .carousel-item-start.active, 
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+transform: translateX(0);
+}
 .cta{
     background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(2, 2, 2, 0.8)), url(https://static.tildacdn.com/tild6230-3439-4462-b061-353561653762/20200126_114905.jpg) fixed center center;
     padding: 80px 0;
@@ -182,6 +215,7 @@
 }
 .contact h2{
     text-align: center;
+    margin: 85px 0 0 0;
 }
 .contact .info .info-icon{
     background: #8B008B;
